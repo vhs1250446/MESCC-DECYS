@@ -1,0 +1,379 @@
+{
+  "model": "AppShield level 0",
+  "findings": 76,
+  "excluded": 33,
+  "threats": [
+    {
+      "id": "AC14",
+      "name": "Catching exception throw/signal from privileged block",
+      "severity": "Very High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "DS06",
+      "name": "Data Leak",
+      "severity": "Very High",
+      "targets": [
+        "Credentials and scan request",
+        "Resource requests",
+        "File and registry reads",
+        "File and registry contents and metadata",
+        "Raw integrity data",
+        "Detected alterations"
+      ]
+    },
+    {
+      "id": "INP02",
+      "name": "Overflow Buffers",
+      "severity": "Very High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP07",
+      "name": "Buffer Manipulation",
+      "severity": "Very High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP23",
+      "name": "File Content Injection",
+      "severity": "Very High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "AC12",
+      "name": "Privilege Escalation",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "AC15",
+      "name": "Schema Poisoning",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "AC23",
+      "name": "Credentials Disclosure",
+      "severity": "High",
+      "targets": [
+        "Credentials and scan request"
+      ]
+    },
+    {
+      "id": "CR03",
+      "name": "Dictionary-based Password Attack",
+      "severity": "High",
+      "targets": [
+        "AppShield Console"
+      ]
+    },
+    {
+      "id": "CR06",
+      "name": "Communication Channel Manipulation",
+      "severity": "High",
+      "targets": [
+        "Resource requests",
+        "Raw integrity data"
+      ]
+    },
+    {
+      "id": "DR01",
+      "name": "Unprotected Sensitive Data",
+      "severity": "High",
+      "targets": [
+        "Credentials and scan request",
+        "Resource requests",
+        "File and registry reads",
+        "File and registry contents and metadata",
+        "Raw integrity data",
+        "Detected alterations"
+      ]
+    },
+    {
+      "id": "INP08",
+      "name": "Format String Injection",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP12",
+      "name": "Client-side Injection-induced Buffer Overflow",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP13",
+      "name": "Command Delimiters",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP24",
+      "name": "Filter Failure through Buffer Overflow",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP25",
+      "name": "Resource Injection",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP26",
+      "name": "Code Injection",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP31",
+      "name": "Command Injection",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP32",
+      "name": "XML Injection",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP33",
+      "name": "Remote Code Inclusion",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP35",
+      "name": "Leverage Alternate Encoding",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP41",
+      "name": "Argument Injection",
+      "severity": "High",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "AA01",
+      "name": "Authentication Abuse/ByPass",
+      "severity": "Medium",
+      "targets": [
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "AA02",
+      "name": "Principal Spoof",
+      "severity": "Medium",
+      "targets": [
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "AC01",
+      "name": "Privilege Abuse",
+      "severity": "Medium",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "AC05",
+      "name": "Content Spoofing",
+      "severity": "Medium",
+      "targets": [
+        "Credentials and scan request",
+        "Resource requests",
+        "File and registry reads",
+        "File and registry contents and metadata",
+        "Raw integrity data",
+        "Detected alterations"
+      ]
+    },
+    {
+      "id": "AC13",
+      "name": "Hijacking a privileged process",
+      "severity": "Medium",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "CR08",
+      "name": "Client-Server Protocol Manipulation",
+      "severity": "Medium",
+      "targets": [
+        "Resource requests",
+        "Raw integrity data"
+      ]
+    },
+    {
+      "id": "DE01",
+      "name": "Interception",
+      "severity": "Medium",
+      "targets": [
+        "Resource requests",
+        "Raw integrity data"
+      ]
+    },
+    {
+      "id": "DE02",
+      "name": "Double Encoding",
+      "severity": "Medium",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "DE03",
+      "name": "Sniffing Attacks",
+      "severity": "Medium",
+      "targets": [
+        "Resource requests",
+        "Raw integrity data"
+      ]
+    },
+    {
+      "id": "DO01",
+      "name": "Flooding",
+      "severity": "Medium",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "DO02",
+      "name": "Excessive Allocation",
+      "severity": "Medium",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "id": "INP14",
+      "name": "Input Data Manipulation",
+      "severity": "Medium",
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    }
+  ],
+  "assumptions": [
+    {
+      "name": "Desktop console, no browser",
+      "description": "The brief describes a C++ Windows service and a console that also runs from a boot CD. Nothing is rendered in a browser, so HTML, cookie and iFrame attacks do not apply.",
+      "threats": [
+        "AC18",
+        "AC20",
+        "AC21",
+        "INP20",
+        "INP27",
+        "INP28",
+        "INP29",
+        "INP30"
+      ],
+      "targets": [
+        "AppShield Console",
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "name": "Host has no password login",
+      "description": "The brief describes no users or passwords on the host. Its missing authentication is kept as AA01/AA02.",
+      "threats": [
+        "CR03"
+      ],
+      "targets": [
+        "AppShield Application (host component)"
+      ]
+    },
+    {
+      "name": "Local to the console machine",
+      "description": "The administrator uses the console on its own machine (lv0 assumption), so this flow does not cross the network.",
+      "threats": [
+        "CR06",
+        "CR08",
+        "DE01",
+        "DE03"
+      ],
+      "targets": [
+        "Credentials and scan request",
+        "Detected alterations"
+      ]
+    },
+    {
+      "name": "Local to the monitored machine",
+      "description": "The host reads files and keys through Windows on the same machine, so this flow does not cross the network.",
+      "threats": [
+        "CR06",
+        "CR08",
+        "DE01",
+        "DE03"
+      ],
+      "targets": [
+        "File and registry reads",
+        "File and registry contents and metadata"
+      ]
+    }
+  ]
+}
