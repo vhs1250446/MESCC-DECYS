@@ -15,15 +15,26 @@ BAUD = 115200
 def init(serialObj):
     # initial wait for arduino setup
     time.sleep(2)
+    out = serialObj.readall()
+    if out:
+        sys.stdout.write(out.decode())
 
     serialObj.write(ALAN_PASSWORD.encode() + b"\n")
+    print(ALAN_PASSWORD)
     time.sleep(1)
 
+    out = serialObj.readall()
+    if out:
+        sys.stdout.write(out.decode())
+
     serialObj.write(CC_PASSWORD.encode() + b"\n")
+    print(CC_PASSWORD)
     time.sleep(2)
 
     # skip all the text after logging as alan
-    serialObj.readall()
+    out = serialObj.readall()
+    if out:
+        sys.stdout.write(out.decode())
     time.sleep(2)
 
 
@@ -52,19 +63,26 @@ def main():
         seen = {}
         while True:
             port.write(filler.encode() + b"\n")
+            print(filler)
             time.sleep(1)
 
-            text = port.readline().decode().strip()
+            # read all output from the device
+            out = port.readall()
+            if out:
+                sys.stdout.write(out.decode())
+            text = out.decode().strip()
 
             if re.search("Incorrect", text) is None:
                 time.sleep(2)
-
-                print(text)
-                text = port.read_until(b'Dan').decode().strip()
-                print(text)
+                out = port.readall()
+                if out:
+                    sys.stdout.write(out.decode())
                 sys.exit()
 
-            number = re.findall(r'\d+', text)[-1]
+            try:
+                number = re.findall(r'\d+', text)[-1]
+            except IndexError:
+                continue
 
             if number in seen and not matched:
                 filler = number
@@ -75,7 +93,6 @@ def main():
             else:
                 seen[number] = True
 
-            print(f"Attempt[{count}] {text}")
             count = count + 1
 
 
